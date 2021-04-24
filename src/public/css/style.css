@@ -1,0 +1,24 @@
+#div-main-Mid{
+  border: 2px solid;
+  background-color: rgb(255, 255, 255);  
+  overflow-y: scroll;
+  
+}
+
+nav{
+  border:whitesmoke;
+}
+
+div .divMain{
+   height: 600px;
+   
+}
+
+div #divData, #divHora{
+  color:whitesmoke;
+  font-size: 18px;
+}
+body{
+  background-color: rgb(40, 59, 70);
+ 
+}
