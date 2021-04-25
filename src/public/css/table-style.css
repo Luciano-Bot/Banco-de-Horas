@@ -16,13 +16,13 @@ table td {
     padding-bottom: 5px;
 }
 
-label{
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: middle !important;
-    padding-top: 25px;
-    padding-left:8px;
+tr :hover{
+background-color:rgb(135, 135, 135) !important;
+color:whitesmoke;
+
+
 }
+
 
 tr textarea{
     resize: none;
@@ -31,8 +31,4 @@ tr textarea{
 
 table textarea{
     border: 2px solid
-}
-
-table button{
-    vertical-align: middle;
 }

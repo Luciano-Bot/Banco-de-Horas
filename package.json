@@ -1,0 +1,27 @@
+{
+  "name": "banco-de-horas",
+  "version": "1.0.0",
+  "description": "noderest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luciano-Bot/Banco-de-Horas.git"
+  },
+  "author": "luciano-bot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luciano-Bot/Banco-de-Horas/issues"
+  },
+  "homepage": "https://github.com/Luciano-Bot/Banco-de-Horas#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "yarn": "^1.22.10"
+  }
+}

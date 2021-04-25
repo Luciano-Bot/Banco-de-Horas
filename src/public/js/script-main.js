@@ -36,7 +36,11 @@ function inserir(){
     
     txtArea =  document.querySelector('#input-client')
     if(txtArea.value == ''){
-        alert('Digite Algum nome antes de inserir na lista')
+       $('#add-Btn').popover({
+           title:"Erro!",
+           content:"O Campo não pode estar vazio!",
+           trigger:"click"
+        })
         return
     }
     var checklist = new itemTable(txtArea,dataHora_head)
@@ -77,6 +81,7 @@ $('#div-list-pen').on('click','#cbox-all', function(){
 
 function itemTable(txt,hora_inicio){
 
+    this.td_cont = document.createElement("td")
     this.cont   = document.getElementById("tabela").childElementCount
 
     this.tbody = document.createElement("tbody")
@@ -87,6 +92,7 @@ function itemTable(txt,hora_inicio){
     
     // this.td_check     = document.createElement("td")
 
+    this.td_label = document.createElement("td")
     this.label  = document.createElement("label")
     
     this.cbox = document.createElement("input")
@@ -112,7 +118,7 @@ function itemTable(txt,hora_inicio){
     this.txt_area.setAttribute("rows","3")
     this.txt_area.setAttribute("maxlength","100")
     this.txt_area.classList.add("tx-area-item")
-
+/*
     this.td_btn = document.createElement("button")
     this.td_btn.classList.add("btn-item")
     this.td_btn.classList.add("btn")
@@ -125,20 +131,25 @@ function itemTable(txt,hora_inicio){
     this.i.classList.add("bi")
     this.i.classList.add("bi-check2")
 
-    this.td_texto.appendChild(this.txt_area)
+*/
+    this.td_cont.append(this.cont)
     this.label.append(this.cbox)
+    this.td_label.append(this.label)
+    this.td_texto.appendChild(this.txt_area)
+    
    
-    this.td_btn.append(this.i)
+    //this.td_btn.append(this.i)
    
    
     $(this.row).append(
-                    this.tbody,
-                    this.label,
+                  
+                    this.td_label,
+                    this.td_cont,
                     this.td_nome,
                     this.td_inicio,
                     this.td_fim,
                     this.td_texto,
-                    this.td_btn
+               //     this.td_btn
                     ).hide().fadeIn(700)
 
     $("#tabela").append(this.row)
